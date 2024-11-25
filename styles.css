@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body{
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F5F5F5;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px;
+    width: 90%;
+    max-width: 1440px;
+  }
+
+  .item {
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word; /* Permite quebra de palavras longas */
+    word-break: break-word; /* Quebra palavras que excedem o limite do bloco */
+    white-space: normal;
+  }
+
+.item1{
+    order: 0;
+    grid-column: span 2;
+    grid-row: span 2;
+    color: #fff;
+    font-size: 1.5rem; 
+    text-align: center;
+    padding: 24px;
+    background-color: hsl(256, 67%, 59%);
+}
+
+.item2 {
+    color: black;
+    background-color: #FFFFFF
+  }
+  
+  .item3 {
+    color: black;
+    background-color: hsl(39, 100%, 71%);
+  }
+  
+  .item4 {
+    color: black;
+    background-color: hsl(254, 88%, 90%);
+  }
+  
+  .item5 {
+    background-color: hsl(256, 67%, 59%);
+  }
+  
+  .item6 {
+    color: black;
+    background-color: hsl(0, 0%, 100%);
+  }
+  
+  .item7 {
+    line-height: 30px;
+    font-weight: 800;
+    text-align: left;
+    font-size: 30px;
+    order: -1;
+    grid-column: 1; /* Começa na coluna 1 */
+    grid-row: span 2; /* Ocupa 2 linhas */
+    color: black;
+    background-color: #FAEEE2;
+    padding: 16px;
+
+    img{
+        cursor: pointer;
+        padding-top: 20px;
+        max-width: 80%;
+    }
+  }
+  
+  .item8 {
+    color: black;
+    background-color: hsl(39, 100%, 71%);
+  }
+
+.yellowtext{
+    color: hsl(39, 100%, 71%);
+}
+
+.purpletext{
+    color: hsl(256, 67%, 59%);
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Única coluna para dispositivos móveis */
+    }
+    .item {
+        grid-column: span 1;
+        font-size: 1rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}
