@@ -48,8 +48,7 @@ body{
 }
   
   .item img {
-    max-width: 100%; /* Limita a largura ao tamanho do bloco */
-  height: auto; /* Mantém a proporção */
+  height: auto; 
   object-fit: contain;
   }
 
@@ -66,6 +65,8 @@ body{
     }
 
     h1{
+      padding-top: 40px;
+      line-height: 80px;
       letter-spacing: -0.05em;
       font-size: 80px;
       font-weight: 500;
@@ -126,7 +127,7 @@ body{
       align-self: center;
       transform: translateY(100px);
       object-fit: cover;
-      margin-top: -70px;
+      margin-top: -60px;
       height: auto;
     }
   }
@@ -136,8 +137,31 @@ body{
     padding: 20px;
     color: black;
     background-color: hsl(254, 88%, 90%);
+
+    h3{
+      padding-left: 15px;
+      padding-top: 45px;
+      padding-bottom: 30px;
+      font-size: 35px;
+      line-height: 0.9;
+      word-spacing: 0.01em;
+      font-weight: 500;
+      text-align: left;
+      align-self: self-start;
+    }
+
+    p{
+      padding-left: 15px;
+      font-weight: 400;
+      text-align: left;
+      align-self: self-start;
+    }
+
     img{
-      height: 80px;
+      height: 400px;
+      display: block; /* Evita espaços abaixo da imagem */
+      margin-bottom: 15px;
+      transform: translateX(100px);
     }
   }
   
@@ -145,12 +169,21 @@ body{
     grid-area: item5;
     align-items: start;
     background-color: hsl(256, 67%, 59%);
+    display: flex;
+    
     
     h3{
+      align-items: center;
+      font-size: 45px;
+      line-height: 0.9;
+      word-spacing: 0.01em;
+      font-weight: 500;
       margin: 0;
       align-self: flex-end;
       text-align: left;
-      padding: 10px;
+      right: 15px;
+      top: 160px;
+      position: relative;
     }
 
     img{
@@ -220,9 +253,10 @@ body{
     justify-content: center;
     color: black;
     background-color: hsl(39, 100%, 71%);
+    padding-bottom: 155px;
 
     p{
-      padding: 10px 0 0 10px;
+      padding: 0px 0 100px 10px;
       line-height: 40px;
       font-size: 50px;
       letter-spacing: -0.06em;
@@ -234,7 +268,7 @@ body{
       padding-left: 10px;
     align-items: center;
     justify-content: center;
-      height: 500px;
+      height: 282px;
     }
   }
   
@@ -256,13 +290,13 @@ body{
   .grid-container {
     grid-template-areas: 
       "item1"
-      "item7"
       "item2"
       "item3"
       "item4"
-      "item8"
+      "item5"
       "item6"
-      "item5";
+      "item7"
+      "item8";
     grid-template-columns: 1fr;
   }
 }
