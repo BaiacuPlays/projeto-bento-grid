@@ -11,6 +11,8 @@ body{
   justify-content: center;
   align-items: center;
   background-color: #F5F5F5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .grid-container {
@@ -52,9 +54,8 @@ body{
   }
 
   .item1 {
-    font-weight: bold;
-    font-size: 30px;
     grid-area: item1;
+    padding-top: 40px;
     background-color: hsl(256, 67%, 59%);
     color: white;
     
@@ -64,7 +65,14 @@ body{
       width: 200px;
     }
 
+    h1{
+      letter-spacing: -0.05em;
+      font-size: 80px;
+      font-weight: 500;
+    }
+
     p{
+      opacity: 0.7;
       font-size: 20px;
     }
   }
@@ -75,22 +83,51 @@ body{
     text-align: left;
     align-items: start;
     padding-left: 20px;
-    font-size: 30px;
-    line-height: 37px;
     color: black;
     background-color: #FFFFFF;
+
+    h3{
+      font-size: 36px;
+      line-height: 30px;
+      letter-spacing: -0.06em;
+      font-weight: 500;
+    }
     
     img{
-      height: 80px;
+      padding-bottom: 20px;
     }
   }
   
   .item3 {
     grid-area: item3;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    overflow: hidden; /* Garante que apenas a parte visível seja exibida */
+    position: relative;
     color: black;
     background-color: hsl(39, 100%, 71%);
+
+    h3{
+      font-size: 35px;
+      line-height: 0.9;
+      word-spacing: 0.01em;
+      font-weight: 500;
+      align-self: flex-start;
+      text-align: left;
+      padding: 10px 0 0 10px;
+    }
+
     img{
-      height: 80px;
+      width: 90%;
+      display: block;
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      align-self: center;
+      transform: translateY(100px);
+      object-fit: cover;
+      margin-top: -70px;
+      height: auto;
     }
   }
   
@@ -126,7 +163,25 @@ body{
     color: black;
     background-color: hsl(0, 0%, 100%);
 
+    .bignumber{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      text-align: left;
+      font-size: 60px;
+      line-height: 40px;
+      font-weight: 500;
+    }
+
+    h3{
+      padding-bottom: 15px;
+      font-size: 22px;
+      word-spacing: 0.01em;
+      line-height: 40px;
+      font-weight: 400;
+    }
+
     img{
+      align-self: flex-start;
     margin: 20px;
       height: 80px;
     }
@@ -136,42 +191,49 @@ body{
     grid-area: item7;
     background-color: #FAEEE2;
     color: black;
-    text-align: left;
+    height: 100%;
     padding: 60px;
-    display: flex; 
     align-items: center;
     justify-content: center;
-    font-size: 40px;
-    line-height: 40px;
- 
+    
+    p{
+      text-align: left;
+      font-size: 40px;
+      letter-spacing: -0.1em;
+      line-height: 40px;
+      font-weight: 500;
+    }
   
     img{
         cursor: pointer;
         padding-top: 20px;
-        max-width: 80%;
+        max-width: 100%;
     }
-  }
-  
-  .item7, .item8 {
-    align-self: start; /* Faz os itens 7 e 8 começarem do topo de suas áreas */
   }
 
   .item8 {
     grid-area: item8;
-    line-height: 40px;
     box-sizing: border-box;
-    font-weight: 900;
     text-align: left;
-    font-size: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: black;
     background-color: hsl(39, 100%, 71%);
-    height: 100%;
+
+    p{
+      padding: 10px 0 0 10px;
+      line-height: 40px;
+      font-size: 50px;
+      letter-spacing: -0.06em;
+      font-weight: 500;
+    }
 
 
     img{
+      padding-left: 10px;
+    align-items: center;
+    justify-content: center;
       height: 500px;
     }
   }
