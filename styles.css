@@ -19,7 +19,7 @@ body{
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Define 4 colunas */
   grid-template-rows: repeat(4, auto); /* Altura ajustável */
-  gap: 40px; /* Espaçamento entre os itens */
+  gap: 30px;
   width: 90%;
   max-width: 1440px;
   align-items: stretch;
@@ -48,25 +48,25 @@ body{
 }
   
   .item img {
-    max-width: 110%;
-    height: auto;
+  height: auto;
   object-fit: contain;
   }
 
   .item1 {
     grid-area: item1;
-    padding-top: 40px;
+    height: 100%;
+    margin-top: 40px;
     background-color: hsl(256, 67%, 59%);
     color: white;
     
     img{
-      padding-bottom: 10px;
-      padding-top: 15px;
+      margin-bottom: 10px;
+      margin-top: 15px;
       width: 200px;
     }
 
     h1{
-      padding-top: 40px;
+      margin-top: 40px;
       line-height: 80px;
       letter-spacing: -0.05em;
       font-size: 80px;
@@ -84,21 +84,23 @@ body{
     box-sizing: border-box;
     text-align: left;
     align-items: start;
+    align-self: center;
+    height: 80%;
+    justify-content: center;
     color: black;
     background-color: #FFFFFF;
 
     h3{
-      margin-top: 15px;
-      margin-bottom: 20px;
+      margin: 25px;
       font-size: 40px;
-      line-height: 30px;
+      line-height: 35px;
       letter-spacing: -0.06em;
       font-weight: 500;
     }
     
     img{
-      height: 100%;
-     margin-bottom: 20px;
+      height: 30%;
+      margin-bottom: 20px;
     }
   }
   
@@ -108,11 +110,13 @@ body{
     flex-direction: column; /* Organiza os elementos verticalmente */
     overflow: hidden; /* Garante que apenas a parte visível seja exibida */
     position: relative;
+    align-self: center;
+    height: 80%;
     color: black;
     background-color: hsl(39, 100%, 71%);
 
     h3{
-      font-size: 35px;
+      font-size: 40px;
       line-height: 0.9;
       word-spacing: 0.01em;
       font-weight: 500;
@@ -136,7 +140,7 @@ body{
   }
   
   .item4 {
-    grid-area: item4;
+  grid-area: item4;
   padding: 20px;
   color: black;
   background-color: hsl(254, 88%, 90%);
@@ -156,6 +160,8 @@ body{
     }
 
     p{
+      font-size: 22px;
+      padding-top: 25px;
       padding-left: 15px;
       font-weight: 400;
       text-align: left;
@@ -163,11 +169,12 @@ body{
     }
 
     img{
-      width: 110%; /* A imagem ocupa 100% da largura do container */
-  height: auto; /* Mantém a proporção original da imagem */
-  max-height: none; /* Permite que a imagem cresça sem restrições */
-  transform: translateX(100px); /* Mantém o deslocamento necessário */
-  object-fit: contain; /* Garante que a imagem se ajusta sem distorções */
+      
+  width: 500px;
+  height: auto;
+  max-height: none; 
+  transform: translateX(10px); 
+  object-fit: contain;
   display: block;
   margin: 0 auto;
     }
@@ -191,6 +198,7 @@ body{
     }
 
     img{
+      margin: 15px;
       height: 250px;
     }
   }
@@ -199,13 +207,12 @@ body{
     grid-area: item6;
     color: black;
     background-color: hsl(0, 0%, 100%);
-    margin-bottom: 150px;
 
     .bignumber{
-     margin-top: 25px;
+      margin-top: 25px;
       margin-bottom: 20px;
       text-align: left;
-      font-size: 60px;
+      font-size: 70px;
       line-height: 40px;
       font-weight: 500;
     }
@@ -260,7 +267,7 @@ body{
     background-color: hsl(39, 100%, 71%);
 
     p{
-      margin: 0px 0 100px 10px;
+      margin: 15px 0 100px 20px;
       line-height: 40px;
       font-size: 50px;
       letter-spacing: -0.06em;
@@ -302,5 +309,12 @@ body{
       "item7"
       "item8";
     grid-template-columns: 1fr;
+  }
+
+  .item3 img {
+    width: 140%; /* Garante que a imagem ocupe o espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 0; /* Ajusta margens */
+    object-fit: contain; /* Mostra a imagem completa */
   }
 }
